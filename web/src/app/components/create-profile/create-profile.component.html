@@ -1,0 +1,43 @@
+
+
+
+
+
+
+  <body>
+    <h1 class="font-weight-bold" class="text-warning" >Insert Paper to Database <span class="badge badge-secondary"></span></h1>
+    <hr class="font-weight-bold"  />
+
+  <br>
+    <form [formGroup]="form" (submit)="onSubmit()">
+
+      <div>
+        <label class="font-weight-bold">Insert Paper name</label>
+        <br>
+        <br>
+        <input formControlName="name" type="text" placeholder="Enter name..." />
+      </div>
+      <div>
+        <br>
+        <label class="font-weight-bold">Select Paper</label>
+        <br>
+        <br>
+        <input (change)="onFileSelect($event)" type="file"/>
+      </div>
+     <!-- <div *ngIf="videoData">
+        <video>
+        <source [src]="videoData" [type]="form.value.name" /></video>
+      </div>-->
+      <div>
+        <br>
+        <label class="font-weight-bold">Upload the Paper </label>
+        <br>
+        <br>
+        <button type="submit" class="btn btn-success" >Upload Paper</button>
+      </div>
+    </form>
+
+    </body>
+
+
+
